@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 from PIL import Image
 
-IMAGE_PATH = "taylor_swift.png"
+IMAGE_PATH = "images/taylor_swift.png"
 image = Image.open(IMAGE_PATH)
 
 with open(IMAGE_PATH, "rb") as f:
@@ -23,7 +23,7 @@ signature = private_key.sign(
     hashes.SHA256()
 )
 
-with open("image_signed.png", "wb") as f:
+with open("images/image_signed.png", "wb") as f:
     f.write(image_data)
     f.write(signature)
 

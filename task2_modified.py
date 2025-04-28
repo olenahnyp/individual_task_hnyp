@@ -3,7 +3,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
 from PIL import Image, PngImagePlugin
 
-image = Image.open("taylor_swift.png")
+image = Image.open("images/taylor_swift.png")
 
 image_bytes = image.tobytes()
 
@@ -29,5 +29,5 @@ signature = private_key.sign(
 metadata = PngImagePlugin.PngInfo()
 metadata.add_text("hidden_signature", signature.hex())
 
-image.save("image_signed_modified.png", pnginfo=metadata)
+image.save("images/image_signed_modified.png", pnginfo=metadata)
 print("Зображення підписано та збережено як image_signed_modified.png")

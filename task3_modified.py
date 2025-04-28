@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.exceptions import InvalidSignature
 from PIL import Image
 
-image = Image.open("image_signed_modified.png")
+image = Image.open("images/image_signed_modified.png")
 
 signature_hex = image.text.get("hidden_signature", None)
 if not signature_hex:

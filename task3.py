@@ -7,7 +7,7 @@ from cryptography.exceptions import InvalidSignature
 with open("public_key.pem", "rb") as f:
     public_key = serialization.load_pem_public_key(f.read())
 
-with open("image_signed.png", "rb") as f:
+with open("images/image_signed.png", "rb") as f:
     full_data = f.read()
 
 signature = full_data[-512:]
