@@ -40,9 +40,9 @@
 
 На цей репозиторій я додала тільки публічний ключ, щоб перевірити, чи підписані зображення мають правильний підпис. Щоб згенерувати власний приватний та публічний ключ і мати змогу підписувати свої зображення, зараньте в терміналі наступний код:
 
-openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
+*openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096*
 
-openssl rsa -pubout -in private_key.pem -out public_key.pem
+*openssl rsa -pubout -in private_key.pem -out public_key.pem*
 
 Також не забудьте у файлах змінити назву зображення, яке ви підписуєте :)
 
